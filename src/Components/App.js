@@ -6,8 +6,6 @@ export default class App extends Component {
     return (
       <div>
         <Timer />
-        <button>Start</button>
-        <button>Reset</button>
       </div>
     )
   }
