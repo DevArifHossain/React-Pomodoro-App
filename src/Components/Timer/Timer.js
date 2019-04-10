@@ -5,7 +5,6 @@ class Timer extends Component {
         min: 25,
         sec: 0
     }
-    
     onTimerStart = () => {
         // const min = this.state.min
         // const sec = this.state.sec
@@ -25,15 +24,15 @@ class Timer extends Component {
                 })
             }
         }
-        
-        setInterval(calcTime, 1000)
 
-
+            // this -> makes stuff global so other functions can use this (not sure if i'm right with this statement but i hope so)
+        this.increment = setInterval(calcTime, 1000)
     }
 
     onTimerReset = () => {
+        clearInterval(this.increment)
         this.setState({
-            min: 25,
+            min: 25, 
             sec: 0
         })
     }
