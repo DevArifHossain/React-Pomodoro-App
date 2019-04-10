@@ -1,14 +1,12 @@
 import React, {Component} from 'react'
+import './timer.css'
 
 class Timer extends Component {
     state = {
         min: 25,
-        sec: 0
+        sec: 0 + '0'
     }
     onTimerStart = () => {
-        // const min = this.state.min
-        // const sec = this.state.sec
-
         const calcTime = () => {
             const min = this.state.min
             const sec = this.state.sec
@@ -33,16 +31,18 @@ class Timer extends Component {
         clearInterval(this.increment)
         this.setState({
             min: 25, 
-            sec: 0
+            sec: 0 + '0'
         })
     }
 
     render() {
         return (
-            <div>
-                <h1 className="display-1">{this.state.min} : {this.state.sec}</h1>
-                <button className="btn btn-outline-success" onClick={this.onTimerStart}>Start</button>
-                <button className="btn btn-outline-danger" onClick={this.onTimerReset}>Reset</button>
+            <div id="timer-con">
+                <div class="timer">{this.state.min}:{this.state.sec}</div>
+                <div className="btns">
+                    <button className="btn start" onClick={this.onTimerStart}>Start</button>
+                    <button className="btn reset" onClick={this.onTimerReset}>Reset</button>
+                </div>
             </div>
         )
     }

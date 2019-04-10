@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css?family=VT323");
+#timer-con {
+  height: 500px;
+  width: 580px;
+  background-color: yellowgreen;
+  margin: 5rem auto;
+  background: url("../../assets/tomato.png") no-repeat center center/cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #eee;
+}
+
+#timer-con .timer {
+  font-size: 12rem;
+  font-family: 'VT323', monospace;
+  font-weight: bold;
+}
+
+#timer-con .btn {
+  font-size: 1.2rem;
+  padding: .75rem 2.5rem;
+  margin: .5rem;
+  border-radius: .25rem;
+  color: #fff;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+}
+
+#timer-con .btn:hover {
+  -webkit-transform: translateY(-1px);
+          transform: translateY(-1px);
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+#timer-con .btn:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  -webkit-transform: translate(0);
+          transform: translate(0);
+  outline: none;
+}
+
+#timer-con .start {
+  background-color: #00A300;
+  -webkit-box-shadow: 2px 2px 2px #044e04;
+          box-shadow: 2px 2px 2px #044e04;
+}
+
+#timer-con .reset {
+  background-color: #0000A3;
+  -webkit-box-shadow: 2px 2px 2px #01012b;
+          box-shadow: 2px 2px 2px #01012b;
+}
+
+@media (max-width: 700px) {
+  #timer-con {
+    width: 300px;
+    height: 280px;
+  }
+  #timer-con .timer {
+    font-size: 6rem;
+  }
+  #timer-con .btn {
+    font-size: 1rem;
+    padding: .5rem 1.5rem;
+  }
+}
+/*# sourceMappingURL=timer.css.map */
